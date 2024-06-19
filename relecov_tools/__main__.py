@@ -20,6 +20,7 @@ import relecov_tools.read_bioinfo_metadata
 import relecov_tools.metadata_homogeneizer
 import relecov_tools.gisaid_upload
 import relecov_tools.upload_ena_protocol
+import relecov_tools.build_schema
 
 log = logging.getLogger()
 
@@ -471,6 +472,34 @@ def metadata_homogeneizer(institution, directory, output):
         institution, directory, output
     )
     new_parse.converting_metadata()
+
+
+# schema builder
+@relecov_tools_cli.command(help_priority=13)
+@click.option(
+    "-i"
+    "--input_file",
+    type=click.Path(),
+    help="Path to the Excel document containing the database definition."
+)
+@click.option(
+    "-p",
+    "--print_diff",
+    type=click.BOOL,
+    help="Prints a changelog/diff between the current and incoming versions of the schema schema_relecov.json."
+)
+@click.option(
+    "-o",
+    "--out_dir",
+    type=click.Path(),
+    help="Path to save output file"
+)
+def build_schema(input_file, print_diff, out_dir):
+    """"""
+    schema_update = relecov_tools.build_schema.SchemaBuilder(
+        input_file, print_diff, out_dir
+    )
+    #schema_update.<caller>()
 
 
 if __name__ == "__main__":
