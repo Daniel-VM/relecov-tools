@@ -477,14 +477,20 @@ def metadata_homogeneizer(institution, directory, output):
 # schema builder
 @relecov_tools_cli.command(help_priority=13)
 @click.option(
-    "-i"
+    "-i",
     "--input_file",
     type=click.Path(),
     help="Path to the Excel document containing the database definition."
 )
 @click.option(
-    "-p",
-    "--print_diff",
+    "-s",
+    "--schema_base",
+    type=click.Path(),
+    help="Path to the Excel document containing the database definition."
+)
+@click.option(
+    "-d",
+    "--diff",
     type=click.BOOL,
     help="Prints a changelog/diff between the current and incoming versions of the schema schema_relecov.json."
 )
@@ -494,13 +500,12 @@ def metadata_homogeneizer(institution, directory, output):
     type=click.Path(),
     help="Path to save output file"
 )
-def build_schema(input_file, print_diff, out_dir):
+def build_schema(input_file, schema_base, diff, out_dir):
     """"""
     schema_update = relecov_tools.build_schema.SchemaBuilder(
-        input_file, print_diff, out_dir
+        input_file, schema_base, diff, out_dir
     )
-    #schema_update.<caller>()
-
+    schema_update.handle_build_schema()
 
 if __name__ == "__main__":
     run_relecov_tools()
