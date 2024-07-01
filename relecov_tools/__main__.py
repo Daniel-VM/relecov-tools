@@ -480,13 +480,15 @@ def metadata_homogeneizer(institution, directory, output):
     "-i",
     "--input_file",
     type=click.Path(),
-    help="Path to the Excel document containing the database definition.",
+    help="Path to the Excel document containing the database definition. This file must have a .xlsx extension.",
+    required=True,
 )
 @click.option(
     "-s",
     "--schema_base",
     type=click.Path(),
-    help="Path to in use json schema (optional).",
+    help="Path to the base schema file. This file is used as a reference to compare it with the schema generated using this module.",
+    required=False,
 )
 @click.option(
     "-v",
@@ -498,7 +500,7 @@ def metadata_homogeneizer(institution, directory, output):
     "-d",
     "--diff",
     type=click.BOOL,
-    help="Prints a changelog/diff between the current and incoming versions of the schema schema_relecov.json.",
+    help="Prints a changelog/diff between the base and incoming versions of the schema.",
 )
 @click.option("-o", "--out_dir", type=click.Path(), help="Path to save output file/s")
 def build_schema(input_file, schema_base, draft_version, diff, out_dir):
