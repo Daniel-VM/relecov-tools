@@ -1,0 +1,246 @@
+[
+  {
+    "sequencing_sample_id": "sample_good",
+    "organism": [
+      {
+        "species": "Klebsiella pneumoniae",
+        "family": "Enterobacteriaceae",
+        "tax_id": "NCBI:txid573",
+        "reference_genome_accession": "GCF_000240185.1",
+        "mash_distance": 0.005,
+        "analysis_date": "2024-11-01",
+        "method": "conventional_identification",
+        "origin": "submitting"
+      },
+      {
+        "species": "Klebsiella pneumoniae",
+        "family": "Enterobacteriaceae",
+        "tax_id": "NCBI:txid573",
+        "reference_genome_accession": "GCF_000240185.1",
+        "mash_distance": 0.001,
+        "analysis_date": "2024-11-20",
+        "method": "wgs_mash",
+        "origin": "isciii"
+      }
+    ],
+    "amr_acquired_genes": [
+      {
+        "allele_name": "blaVIM-1",
+        "gene_name": "VIM",
+        "classification": "carbapenemase",
+        "description": "Metallo-β-lactamase conferring carbapenem resistance",
+        "coverage": 99.1,
+        "depth_of_coverage": "120x",
+        "accession": "ARO:3000173",
+        "software_name": "AMRFinderPlus",
+        "software_version": "1.14.6",
+        "database_name": "NCBI-AMR",
+        "database_version": "2024-11-01",
+        "analysis_date": "2024-11-20",
+        "origin": "isciii"
+      },
+      {
+        "allele_name": "blaSHV-1",
+        "gene_name": "SHV",
+        "classification": "broad_spectrum_beta_lactamase",
+        "description": "Broad-spectrum β-lactamase",
+        "coverage": 97.5,
+        "depth_of_coverage": "95x",
+        "accession": "ARO:3000201",
+        "software_name": "AMRFinderPlus",
+        "software_version": "1.14.6",
+        "database_name": "NCBI-AMR",
+        "database_version": "2024-11-01",
+        "analysis_date": "2024-11-20",
+        "origin": "isciii"
+      }
+    ],
+    "reads_genome_coverage_value": 120.5,
+    "reads_genome_depth_value": 85.2,
+    "assembly_genome_size": 5400000,
+    "assembly_genome_fraction_value": 99.3
+  },
+
+  {
+    "sequencing_sample_id": "sample_missing_required",
+    "organism": [
+      {
+        "species": "Escherichia coli",
+        "family": "Enterobacteriaceae",
+        "tax_id": "NCBI:txid562",
+        "reference_genome_accession": "GCF_000005845.2",
+        "mash_distance": 0.006,
+        "analysis_date": "2024-11-02",
+        "method": "conventional_identification",
+        "origin": "submitting"
+      },
+      {
+        "species": "Escherichia coli",
+        "family": "Enterobacteriaceae",
+        "tax_id": "NCBI:txid562",
+        "reference_genome_accession": "GCF_000005845.2",
+        "mash_distance": 0.002,
+        "analysis_date": "2024-11-21",
+        "method": "wgs_mash",
+        "origin": "isciii"
+      }
+    ],
+    "amr_acquired_genes": [
+      {
+        "allele_name": "blaCTX-M-15",
+        "gene_name": "CTX-M",
+        "classification": "esbl",
+        "description": "ESBL conferring resistance to third-generation cephalosporins",
+        "coverage": 96.0,
+        "depth_of_coverage": "80x",
+        "accession": "ARO:3000209",
+        "software_name": "AMRFinderPlus",
+        "software_version": "1.14.6",
+        "database_name": "NCBI-AMR",
+        "database_version": "2024-11-01",
+        "analysis_date": "2024-11-21",
+        "origin": "isciii"
+      }
+    ],
+    "reads_genome_coverage_value": 75.0,
+    "reads_genome_depth_value": 40.1,
+    "assembly_genome_size": 5100000,
+    "assembly_genome_fraction_value": 95.0
+  },
+
+  {
+    "sequencing_sample_id": "sample_invalid_enum",
+    "organism": [
+      {
+        "species": "Pseudomonas aeruginosa",
+        "family": "Pseudomonadaceae",
+        "tax_id": "NCBI:txid287",
+        "reference_genome_accession": "GCF_000006765.1",
+        "mash_distance": 0.004,
+        "analysis_date": "2024-11-03",
+        "method": "conventional_identification",
+        "origin": "submitting"
+      },
+      {
+        "species": "Pseudomonas aeruginosa",
+        "family": "Pseudomonadaceae",
+        "tax_id": "NCBI:txid287",
+        "reference_genome_accession": "GCF_000006765.1",
+        "mash_distance": 0.001,
+        "analysis_date": "2024-11-22",
+        "method": "wgs_mash",
+        "origin": "isciii"
+      }
+    ],
+    "amr_acquired_genes": [
+      {
+        "allele_name": "blaXXX-999",
+        "gene_name": "INVALIDGENE",
+        "classification": "unknown_classification",
+        "description": "Simulated invalid gene name to test enum validation",
+        "coverage": 90.0,
+        "depth_of_coverage": "60x",
+        "accession": "ARO:9999999",
+        "software_name": "AMRFinderPlus",
+        "software_version": "1.14.6",
+        "database_name": "NCBI-AMR",
+        "database_version": "2024-11-01",
+        "analysis_date": "2024-11-22",
+        "origin": "isciii"
+      }
+    ],
+    "reads_genome_coverage_value": 60.0,
+    "reads_genome_depth_value": 30.0,
+    "assembly_genome_size": 5200000,
+    "assembly_genome_fraction_value": 90.5
+  },
+
+  {
+    "sequencing_sample_id": "sample_partial_optional",
+    "organism": [
+      {
+        "species": "Enterobacter cloacae complex",
+        "family": "Enterobacteriaceae",
+        "tax_id": "NCBI:txid550",
+        "reference_genome_accession": "GCF_000025565.1",
+        "mash_distance": 0.007,
+        "analysis_date": "2024-11-04",
+        "method": "conventional_identification",
+        "origin": "submitting"
+      }
+    ],
+    "amr_acquired_genes": [
+      {
+        "allele_name": "blaKPC-2",
+        "gene_name": "KPC",
+        "classification": "carbapenemase",
+        "description": "KPC carbapenemase",
+        "coverage": 94.2,
+        "depth_of_coverage": "100x",
+        "accession": "ARO:3000165",
+        "software_name": "AMRFinderPlus",
+        "software_version": "1.14.6",
+        "database_name": "NCBI-AMR",
+        "database_version": "2024-11-01",
+        "analysis_date": "2024-11-22",
+        "origin": "isciii"
+      }
+    ],
+    "reads_genome_coverage_value": 110.0,
+    "reads_genome_depth_value": 70.0,
+    "assembly_genome_size": 5300000,
+    "assembly_genome_fraction_value": 97.2
+  },
+
+  {
+    "sequencing_sample_id": "sample_mixed",
+    "organism": [
+      {
+        "species": "Klebsiella pneumoniae",
+        "family": "Enterobacteriaceae",
+        "tax_id": "NCBI:txid573",
+        "reference_genome_accession": "GCF_000240185.1",
+        "mash_distance": 0.002,
+        "analysis_date": "2024-11-23",
+        "method": "wgs_mash",
+        "origin": "isciii"
+      }
+    ],
+    "amr_acquired_genes": [
+      {
+        "allele_name": "blaOXA-48",
+        "gene_name": "OXA-48-like",
+        "classification": "carbapenemase",
+        "description": "OXA-48 carbapenemase",
+        "coverage": 92.0,
+        "depth_of_coverage": "75x",
+        "accession": "ARO:3001689",
+        "software_name": "AMRFinderPlus",
+        "software_version": "1.14.6",
+        "database_name": "NCBI-AMR",
+        "database_version": "2024-11-01",
+        "analysis_date": "2024-11-23",
+        "origin": "isciii"
+      },
+      {
+        "allele_name": "blaTEM-1",
+        "gene_name": "TEM",
+        "classification": "broad_spectrum_beta_lactamase",
+        "description": "Broad-spectrum β-lactamase",
+        "coverage": 88.0,
+        "depth_of_coverage": "65x",
+        "accession": "ARO:3000171",
+        "software_name": "AMRFinderPlus",
+        "software_version": "1.14.6",
+        "database_name": "NCBI-AMR",
+        "database_version": "2024-11-01",
+        "analysis_date": "2024-11-23",
+        "origin": "isciii"
+      }
+    ],
+    "reads_genome_coverage_value": 95.0,
+    "reads_genome_depth_value": 55.0,
+    "assembly_genome_size": 5250000,
+    "assembly_genome_fraction_value": 96.1
+  }
+]
